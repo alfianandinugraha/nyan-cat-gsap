@@ -1,0 +1,33 @@
+img {
+  width: 200px;
+}
+
+button {
+  padding: 16px 32px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#btn-play {
+  background-color: #FF99FF;
+  color: white;
+  margin-right: 6px;
+}
+
+#btn-group {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#cat-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/bg.jpg");
+}
