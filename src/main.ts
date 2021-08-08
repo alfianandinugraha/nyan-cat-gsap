@@ -13,11 +13,12 @@ audio.src = "/music.mp3"
 // GSAP animation timeline
 const catTimelineY = gsap.timeline({paused: true})
 const rainbowTimeline = gsap.timeline({paused: true})
+const backgroundTimeline = gsap.timeline({paused: true})
 const infinityConfig = {repeat: -1, yoyo: true}
 rainbowTimeline.to('#rainbow', {width: '100vw', duration: 5, delay: 5})
 catTimelineY.to('#wrapper', {y: 100, ...infinityConfig})
 catTimelineY.to('#wrapper', {y: -100, ...infinityConfig})
-catTimelineY.to('#cat-container', {
+backgroundTimeline.to('#cat-container', {
     backgroundPositionX: -2000, repeat: -1, ease: 'linear', duration: 3, delay: 3
 })
 
@@ -27,6 +28,7 @@ if (playBtn && pauseBtn) {
         audio.play().then(() => {
             catTimelineY.play()
             rainbowTimeline.play()
+            backgroundTimeline.play()
         })
     })
 
@@ -34,5 +36,6 @@ if (playBtn && pauseBtn) {
         audio.pause()
         catTimelineY.pause()
         rainbowTimeline.pause()
+        backgroundTimeline.pause()
     })
 }
