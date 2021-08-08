@@ -19,10 +19,12 @@ timeline.to('#cat-container', {
     backgroundPositionX: -2000, repeat: -1, ease: 'linear', duration: 3, delay: 3
 })
 
+
 if (playBtn && pauseBtn) {
     playBtn.addEventListener('click', () => {
         audio.play().then(() => {
             timeline.play()
+            gsap.to('#flag', {width: '100vw', duration: 5, delay: 5})
         })
     })
 

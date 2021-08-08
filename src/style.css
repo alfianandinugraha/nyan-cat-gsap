@@ -39,7 +39,9 @@ button {
 }
 
 #flag {
-  width: 100vw;
+  width: 0;
+  height: 120px;
+  object-fit: cover;
   position: absolute;
   right: 50%;
   top: 50%;
