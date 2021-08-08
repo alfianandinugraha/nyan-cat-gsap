@@ -30,4 +30,20 @@ button {
   justify-content: center;
   align-items: center;
   background-image: url("/bg.jpg");
+  position: relative;
 }
+
+#nyan {
+  position: relative;
+  z-index: 2;
+}
+
+#flag {
+  width: 100vw;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+

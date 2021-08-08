@@ -13,9 +13,11 @@ audio.src = "/music.mp3"
 // GSAP animation timeline
 const timeline = gsap.timeline({paused: true})
 const infinityConfig = {repeat: -1, yoyo: true}
-timeline.to('#nyan-cat', {y: 100, ...infinityConfig})
-timeline.to('#nyan-cat', {y: -100, ...infinityConfig})
-timeline.to('#cat-container', {backgroundPositionX: -2000, repeat: -1, ease: 'linear', duration: 3})
+timeline.to('#wrapper', {y: 100, ...infinityConfig})
+timeline.to('#wrapper', {y: -100, ...infinityConfig})
+timeline.to('#cat-container', {
+    backgroundPositionX: -2000, repeat: -1, ease: 'linear', duration: 3, delay: 3
+})
 
 if (playBtn && pauseBtn) {
     playBtn.addEventListener('click', () => {
