@@ -12,7 +12,9 @@ audio.src = "/music.mp3"
 
 // GSAP animation timeline
 const timeline = gsap.timeline({paused: true})
+const rainbowTimeline = gsap.timeline({paused: true})
 const infinityConfig = {repeat: -1, yoyo: true}
+rainbowTimeline.to('#flag', {width: '100vw', duration: 5, delay: 5})
 timeline.to('#wrapper', {y: 100, ...infinityConfig})
 timeline.to('#wrapper', {y: -100, ...infinityConfig})
 timeline.to('#cat-container', {
@@ -24,12 +26,13 @@ if (playBtn && pauseBtn) {
     playBtn.addEventListener('click', () => {
         audio.play().then(() => {
             timeline.play()
-            gsap.to('#flag', {width: '100vw', duration: 5, delay: 5})
+            rainbowTimeline.play()
         })
     })
 
     pauseBtn.addEventListener('click', () => {
         audio.pause()
         timeline.pause()
+        rainbowTimeline.pause()
     })
 }
