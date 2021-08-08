@@ -8,7 +8,7 @@ const pauseBtn = document.getElementById('btn-pause')
 
 // audio resources
 let audio = document.createElement('audio');
-audio.src = "/music.mp3"
+audio.src = "/nyan-cat-gsap/music.mp3"
 
 // GSAP animation timeline
 const catTimelineY = gsap.timeline({paused: true})
