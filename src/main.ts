@@ -14,7 +14,7 @@ audio.src = "/music.mp3"
 const timeline = gsap.timeline({paused: true})
 const rainbowTimeline = gsap.timeline({paused: true})
 const infinityConfig = {repeat: -1, yoyo: true}
-rainbowTimeline.to('#flag', {width: '100vw', duration: 5, delay: 5})
+rainbowTimeline.to('#rainbow', {width: '100vw', duration: 5, delay: 5})
 timeline.to('#wrapper', {y: 100, ...infinityConfig})
 timeline.to('#wrapper', {y: -100, ...infinityConfig})
 timeline.to('#cat-container', {
